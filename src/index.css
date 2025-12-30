@@ -142,7 +142,13 @@ button:active {
   margin-left: 8px;
 }
 
+.cart__container {
+  position: relative; /* parent for absolute positioning */
+  display: inline-block; /* ensures badge positions relative to icon */
+}
+
 .cart__length {
+  position: absolute;
   background-color: red;
   color: white;
   width: 18px;
