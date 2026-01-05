@@ -299,6 +299,8 @@ HIGHLIGHTS
 #highlights {
   position: relative;
   max-width: 100vw;
+  padding-top: 8vw;
+  padding-bottom: 8vw; 
 }
 
 #highlights:after,
