@@ -374,6 +374,8 @@ FEATURES
 #features {
   padding-top: 8vw;
   background-color: rgba(115, 66, 214, 0.1);
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 .books {
