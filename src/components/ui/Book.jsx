@@ -15,7 +15,9 @@ export default function Book({ book }) {
       </a>
 
       <div className="book__title">
-        <a href="/" className="book__title--link">{book.title}</a>
+        <a href="/" className="book__title--link">
+          {book.title}
+        </a>
       </div>
 
       <div className="book__ratings">
@@ -28,11 +30,18 @@ export default function Book({ book }) {
       <div className="book__price">
         {book.salePrice ? (
           <>
-            <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>
-            <span className="book__price--discount">${book.salePrice.toFixed(2)}</span>
+            {/* Only strike-through if there’s a sale */}
+            <span className="book__price--normal book__price--line-through">
+              ${book.originalPrice.toFixed(2)}
+            </span>
+            <span className="book__price--discount">
+              ${book.salePrice.toFixed(2)}
+            </span>
           </>
         ) : (
-          <span className="book__price--normal">${book.originalPrice.toFixed(2)}</span>
+          <span className="book__price--normal">
+            ${book.originalPrice.toFixed(2)}
+          </span>
         )}
       </div>
     </div>
