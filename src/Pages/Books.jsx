@@ -7,9 +7,9 @@ const Books = () => {
 
 function filterBooks(value) {
   if (value === "LOW_TO_HIGH") {
-    setBooks((prevBooks) => [...prevBooks].sort((a, b) => a.price - b.price));
+    setBooks((prevBooks) => [...prevBooks].sort((a, b) => (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)));
   } else if (value === "HIGH_TO_LOW") {
-    setBooks((prevBooks) => [...prevBooks].sort((a, b) => b.price - a.price));
+    setBooks((prevBooks) => [...prevBooks].sort((a, b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice)));
   } else if (value === "RATING") {
     setBooks((prevBooks) => [...prevBooks].sort((a, b) => b.rating - a.rating));
   }
