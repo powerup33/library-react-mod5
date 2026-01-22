@@ -8,7 +8,9 @@ import {
 import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({ cart = [] }) {
+  const totalItems = cart.reduce((total, book) => total + book.quantity, 0);
+
   function menuOpen() {
     document.body.classList.add("menu--open");
   }
@@ -44,7 +46,9 @@ export default function Nav() {
           <li className="nav__list">
             <Link to="/cart" className="nav__link cart__container">
               <FontAwesomeIcon icon={faCartShopping} />
-              <span className="cart__length">2</span>
+              {totalItems > 0 && (
+                <span className="cart__length">{totalItems}</span>
+              )}
             </Link>
           </li>
         </ul>

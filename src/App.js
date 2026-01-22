@@ -39,7 +39,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Nav cart={cart} />
 
         <Routes>
           <Route path="/" element={<Home />} />

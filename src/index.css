@@ -143,12 +143,14 @@ button:active {
 }
 
 .cart__container {
-  position: relative; /* parent for absolute positioning */
-  display: inline-block; /* ensures badge positions relative to icon */
+  position: relative; /* Parent for absolute positioning */
+  display: inline-block; /* Makes badge position relative to icon */
 }
 
 .cart__length {
-  position: absolute;
+  position: absolute; /* Position relative to parent */
+  top: -5px;          /* Slightly above the icon */
+  right: -5px;        /* Slightly to the right */
   background-color: red;
   color: white;
   width: 18px;
@@ -158,11 +160,10 @@ button:active {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  position: absolute;
-  bottom: 4px;
-  right: -4px;
-  pointer-events: none;
+  font-weight: bold;
+  pointer-events: none; /* Prevent click interference */
 }
+
 
 .btn__menu {
   background-color: transparent;
