@@ -23,9 +23,13 @@ function filterBooks(value) {
                 <div className="row">
                     <div className="books__header">
                         <h2 className='section__title books__header--title'>All Books</h2>
-                    <select name="" id="filter" onChange={(event) => filterBooks(event.target.value)}>
-
-                        <option value="defaultValue" disabled>Sort</option>
+                    <select 
+                    name="" 
+                    id="filter" 
+                    defaultValue={"DEFAULT"}
+                    onChange={(event) => filterBooks(event.target.value)}
+                    >
+                        <option value="DEFAULT" disabled>Sort</option>
                         <option value="LOW_TO_HIGH">Price: Low to High</option>
                         <option value="HIGH_TO_LOW">Price: High to Low</option>
                         <option value="RATING">Rating</option>
